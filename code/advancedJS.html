@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advanced JS</title>
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="src/01-this.js"></script>
+	<script type="text/javascript" src="src/02-iife.js"></script>
+	<script type="text/javascript" src="src/03-closure.js"></script>
+	<script type="text/javascript" src="src/04-namespace.js"></script>
+	<script type="text/javascript" src="src/05-constructor.js"></script>
+	<script type="text/javascript" src="src/06-scope.js"></script>
+	<script type="text/javascript" src="src/07-prototype.js"></script>
+	<script type="text/javascript" src="src/08-prototype-memory.js"></script>
+	<script type="text/javascript" src="src/09-deferred.js"></script>
+	<script type="text/javascript" src="src/10-useStrict.js"></script>
+	<script type="text/javascript" src="src/11-performance.js"></script>
+
+	<script type="text/javascript" src="src/functional/foreach.js"></script>
+	<script type="text/javascript" src="src/functional/filter.js"></script>
+	<script type="text/javascript" src="src/functional/map.js"></script>
+	<script type="text/javascript" src="src/functional/reduce.js"></script>
+	<script type="text/javascript" src="src/functional/bind.js"></script>
+
+
+	<script type="text/javascript">
+		function value1() {
+			return $('#input1').val();
+		}
+
+		function value2() {
+			return $('#input2').val();
+		}
+
+		function value1asNumber() {
+			return parseInt(value1(), 10);
+		}
+
+		function value2asNumber() {
+			return parseInt(value2(), 10);
+		}
+
+	</script>
+</head>
+<body>
+<h1>Advanced JavaScript</h1>
+
+Value1: <input type="text" id="input1" /> <br/>
+Value2: <input type="text" id="input2" /> <br/>
+
+<h3>iife</h3>
+<button onclick="alert(isPrime1(value1asNumber()))">isPrime1</button>
+<button onclick="alert(isPrime2(value2asNumber()))">isPrime2</button>
+
+<h3>scope</h3>
+<button onclick="alert('isRich: ' + new User(value1(), value2()).isRich())">isRich</button>
+
+
+</body>
+</html>
